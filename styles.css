@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    color: #333; /* dark gray */ 
+    background-color: #f5f5f5; /* white cream color */ 
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+nav {
+    background-color: #333; /* dark gray */ 
+    position: sticky; /* stay at top */ 
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.navbar li a {
+    color: #fff; /* white */ 
+    padding: 10px 20px;
+    text-decoration: none; /* no underline*/ 
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.navbar li a:hover {
+    color: #FFC7E2; /* light ppink*/ 
+}
+
+.navbar li a.active {
+    color: #FFC7E2;  /* light pink */
+    border-bottom: 3px solid #FFC7E2;
+    padding-bottom: 5px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    background-color: rgb(146, 0, 99); /* dark pink*/ 
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s; 
+
+}
+
+.btn:hover {
+    background-color: rgb(221, 0, 118); /* darker pink from regular button color */ 
+}
+
+/* Sections */
+.profile, .interests, .techHeroSection, /* some of these were removed with feedback changes */ 
+.christian-profile, .ChristiansInterests, .christianTechHeroSection {
+    background-color: #FFC7E2; /* light pink*/ 
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.christian-profile, .ChristiansInterests, .christianTechHeroSection {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Tech Hero Layout */
+.tech-hero {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.hero-image {
+    width: 250px;
+    border-radius: 8px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+/* Cards for Index and Resources */ /* as recoommended in P2 Comment feedback */ 
+/* each person has same style */ 
+.team-cards, .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+
+.team-card, .card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 280px;
+    box-shadow: 0 4px 8px lightslategray; 
+    text-align: center;
+}
+
+.team-card img {
+    width: 200px; /* feed free to change */ 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10%; /* higiher % is more round, change if wanted */ /* arund 50% is circle*/ 
+    margin-bottom: 15px;
+}
+
+.resource-image {
+    width: 80%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+
+/* Project Overview - at top - on index */
+/* image left and texr right */ 
+#project-overview {
+    padding: 60px 10%;
+}
+
+
+.overview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.overview-image {
+    flex: 0 0 40%;
+}
+
+.overview-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.overview-text {
+    flex: 0 0 60%;
+}
+
+.overview-text p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/*Responsive */
+@media (max-width: 760px) {
+    .tech-hero, .overview-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 80%;
+    }
+}
+
+/* Left-align text inside cards */
+.team-card.left-align,
+.team-card.left-align p,
+.team-card.left-align h3,
+.team-card.left-align ul,
+.team-card.left-align li {
+    text-align: left;
+}
+
+/* Center images inside cards */
+.center-image {
+    display: block;
+    margin: 0 auto 15px auto; 
+    border-radius: 12px;
+}
+
+.hero-image {
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Card Images */
+.card-image {
+    display: block;
+    margin: 0 auto 10px auto; 
+    max-width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Cards container for grid layout */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual card styling */
+.card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 8px lightslategray;
+    text-align: center;
+}
+
+/* Headings inside cards */
+.card h3, .card a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none; /* get rid of underline*/ 
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: rgb(221, 0, 118); 
+}
+
+.h2Text p {
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.team-card a,
+.card a {
+    color: rgb(165, 0, 113) ; /* darak pink*/ 
+    transition: color 0.3s ease;
+}
+
+
+.team-card a.btn,
+.card a.btn {
+    color: white;             
+}
+
+.team-card a.btn:hover,
+.card a.btn:hover {
+    color: white;             
+}
+
+.team-card a.btn:active,
+.card a.btn:active {
+    color: white;            
+}
+
+/* center p text in analysis on resources page */ 
+.analysis-section p {
+    text-align: left;
+}
+
+
+.resource-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Video styles - video on index page */ 
+.video-section {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #ffffff;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.video-container iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 12px;
+}
+
+.video-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
