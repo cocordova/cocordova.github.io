@@ -3,360 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geocience in My Daily Life</title>
+    <title>Teachable Machines</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- ML Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 </head>
 <body>
 
-    <!---- Nav Bar ---->
-   <nav>
+    <!-- Nav Bar -->
+    <nav>
         <ul class="navbar">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="GeoscienceInMyDailyLife.html">Geoscience in My Daily Life</a></li>
-            <li><a href="aboutme.html">Geoscience Through Travel</a></li>
-            <li><a href="techHero.html">Earth Systems</a></li>
-            <li><a href="teachableMachine.html">Final Reflection</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="aboutme.html">About Us</a></li>
+            <li><a href="techHero.html">Tech Heroes</a></li>
+            <li><a href="teachableMachine.html" class="active">Teachable Machines</a></li>
         </ul>
     </nav>
 
     <main>
         <header>
-            <h1>Library Resources</h1>
+            <h1>Teachable Machine Project</h1>
         </header>
 
-        <!-- commented out overview paragrph below and replaced with card so its more cohesive-->
-
-        <!-- 
-
-        <section class="h2Text">
-            <h2>Overview</h2>
-            <p> 
-                This library resource page provides an introduction to key concepts that help us better understand identity, equity, and bias within technology. It explores how implicit bias, the unconscious attitudes and stereotypes we all carry, can influence our decisions and interactions, often without our awareness. The page also introduces key terms such as intersectionality, which recognizes how overlapping identities such as race, gender, class, and ability shape people’s unique experiences of privilege and discrimination. Additionally, it highlights the Implicit Bias Test (IBT) as a tool for reflecting on the automatic associations we may hold.
-
-
-            </p>
-        </section>
-        --> 
-
-        <!---- Overview ---->
+        <!-- Project Overview -->
         <section class="key-terms analysis-section">
-            <h2 class="overview-heading"> Overview</h2>
+            <h2 class="overview-heading">Project Overview</h2>
             <div class="cards-container">
-                <div class="card">
-                    
-                    <h3> Understanding Implicit Bias </h3>
-                    <p>
-                        This library resource page provides an introduction to key concepts that help us better understand identity, equity, and bias within technology. It explores how <span class="key-term"><strong>implicit bias</strong></span>, the unconscious attitudes and stereotypes we all carry, can influence our decisions and interactions, often without our awareness. The page also introduces key terms such as <span class="key-term"><strong>intersectionality</strong></span>, which recognizes how overlapping identities such as race, gender, class, and ability shape people's unique experiences of privilege and discrimination. Additionally, it highlights the <span class="key-term"><strong>Implicit Bias Test (IBT)</strong></span>,as a tool for reflecting on the automatic associations we may hold.
+                <div class="card split">
+                    <div class="card-text">
+                        <p>
+                        This project explores the process of training a machine learning model using Google's Teachable Machine, with the goal of understanding how AI systems recognize and classify visual data.<br> 
+                        <br> 
+                        Our group developed an image classifier that is designed to distinguish between different categories of images, specifically different styles, shapes, and colors of cups. The purpose of this project is not only to build a functional machine learning model, but also to better understand how data influences the way algorithms learn and make decisions. By collecting and using original images, we are directly shaping the dataset that the model relies on, which allows us to observe how variations in images, such as lighting, angle, and background, impact the model's performance. <br>
+                        <br>
+                        Through this process, we aim to explore both the technical and conceptual aspects of machine learning. Using Teachable Machine makes it possible to experiment with training an AI model, while still revealing the challenges behind accurate image classification and data collection. This project also encourages us to think about how artificial intelligence systems are built and how the data used to train them can affect outcomes, especially with real-world implications. 
                     </p>
                 </div>
-        </section>
-
-        <!---- Key Terms ---->
-        <section class="key-terms analysis-section">
-            <h2 class="overview-heading">Key Terms</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="RaceIBT.jpg" alt="Implicit Bias Test Image" class="card-image">
-                    <h3>Implicit Bias Test (IBT)</h3>
-                    <p>
-                        The Implicit Bias Test (IBT), also known as the Implicit Association Test (IAT), was developed in 1998 by three scientists: Dr. Tony Greenwald, Dr. Mahzarin Banaji, and Dr. Brian Nosek. The Implicit Bias Test is a psychological assessment designed to measure unconscious biases. It shows the automatic associations we make between people and certain traits. The test measures how quickly you associate certain groups (such as race, gender, or age) with positive or negative words or concepts. If someone responds faster to one pairing than another, the test interprets that as a possible implicit bias.
-                    </p>
+                <div class="card-media">
+                    <img src="visualOfCups.png" alt="Project overview image">
                 </div>
-                <div class="card">
-                    <img src="Intersectionality.jpg" alt="Intersectionality Image" class="card-image">
-                    <h3>Intersectionality</h3>
-                    <p>
-                        Intersectionality means recognizing that people's experiences aren't shaped by just one part of who they are. Factors such as race, gender, class, or ability can overlap, creating unique challenges or advantages for each person.
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="IBias.jpg" alt="Implicit Bias Image" class="card-image">
-                    <h3>Implicit Bias</h3>
-                    <p>
-                        Implicit bias is an automatic, unconscious attitude or stereotype that shapes how we think about and treat others. It’s a quick conclusion the brain makes without you even realizing it. These biases often develop from what we absorb through culture, media, family, and personal experiences. Even if we consciously reject certain stereotypes, implicit biases can still influence our decisions and behavior without our awareness.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!---- Resources ---->
-        <section class="resources">
-            <h2 class="key-terms analysis-section">Resources</h2>
+        <!-- Project Scope -->
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Project Scope</h2>
             <div class="cards-container">
-
-                <!-- ARTICLE: #FFFFFF -->
-                <div class="card resource-card"> <!-- images should be clickable -->
-                    <a href="https://medium.com/this-is-hard/ffffff-diversity-1bd2b3421e8a" target="_blank">
-                        <img src="resource_ffffff.jpg" alt="#FFFFFF Diversity Image" class="card-image">
-                    </a>
-                    
-                    <a href="https://medium.com/this-is-hard/ffffff-diversity-1bd2b3421e8a" target="_blank">
-                        #FFFFFF Diversity
-                    </a>
-                    
+                <div class="card">
                     <p>
-                        The author critiques tech “diversity” programs for mostly helping white women while ignoring other groups. Companies invest heavily on women in tech but rarely include women of color.
+                        The scope of this project includes using Google's Teachable Machine to develop a machine learning image classifier. The project includes collecting and organizing image data, training the model, embedding it into a webpage using HTML, and testing its performance in real time through live webcam input. One of our main goals for this project was to learn more about machine learning systems and understand how they work. We were able to do this directly using our own data. Another goal that we had was that we wanted to evaluate how the variety of the data affects model accuracy. We also want to learn more how teachable machines can struggle when faced with unfamiliar inputs, and how bias in datasets can influence results. Before we started this project, some of the challenges we expected to face had to do with inconsistent predictions. The limited data allows for problems such as sensibility to the lighting and background changes. Another road block we thought we might have to anticipate for was that the model might classify some categories more accurately than others. Overall, we’re excited to work on this project because it gives us hands-on experience with building a machine learning system in a web environment that can help us once we graduate and start our careers.
                     </p>
+                    <div class="card-media">
+                        <img src="scopeImg.png" alt="Project overview image">
+                    </div>
                 </div>
-
-                <!-- ARTICLE: Things I wish someone.... -->
-                <div class="card resource-card"> 
-                    <a href="https://www.freecodecamp.org/news/things-i-wish-someone-had-told-me-when-i-was-learning-how-to-code-565fc9dcb329/" target="_blank">
-                        <img src="ThingIWish.jpg" alt="Learning to Code Image" class="card-image">
-                    </a>
-                
-                    <a href="https://www.freecodecamp.org/news/things-i-wish-someone-had-told-me-when-i-was-learning-how-to-code-565fc9dcb329/" target="_blank">
-                        Things I Wish Someone Had Told Me When I Was Learning How to Code
-                    </a>
-                
-                    <p>
-                        This article shares practical advice from the author's own journey, emphasizing the importance of patience when learning how to code. In the author's opinion, when learning programming, it's helpful to focus on projects that matter to you. This motivational reading reminds learners that struggling is a normal and necessary part of becoming a confident developer.
-                    </p>
-                </div>                
-
-                 <!-- ARTICLE: The Black Scholar -->
-                 <div class="card resource-card"> 
-                    <a href="https://www.tandfonline.com/loi/rtbs20" target="_blank">
-                        <img src="TheBlackScholar.jpg" alt="The Black Scholar Image" class="card-image">
-                    </a>
-                
-                    <a href="https://www.tandfonline.com/loi/rtbs20" target="_blank">
-                        The Black Scholar
-                    </a>
-                
-                    <p>
-                        Created as a space for Black writers and activists to analyze and debate the political and social conditions that affect Black communities. It also explores issues involving power dynamics, especially in relation to exclusion and marginalization.
-                    </p>
-                </div>
-                
-
-                <!-- ARTICLE: IBT TEST -->
-                <div class="card resource-card"> 
-                    <a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank">
-                        <img src="RaceIBT.jpg" alt="Harvard IBT Image" class="card-image">
-                    </a>
-                
-                    <a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank">
-                        Harvard Implicit Bias Test
-                    </a>
-                
-                    <p>
-                        The Implicit Bias Test (IBT) is a range of tests where you can report your beliefs and attitudes about different topics.
-                    </p>
-                </div>
-                
-
-                <!-- ARTICLE: Black Scolar 2 -->
-                <div class="card resource-card"> 
-                    <a href="https://canvas.wisc.edu/courses/498663/files/50386863?wrap=1" target="_blank">
-                        <img src="TheBlackScholar2.jpg" alt="Decoding Black Feminist Hashtags Image" class="card-image">
-                    </a>
-                
-                    <a href="https://canvas.wisc.edu/courses/498663/files/50386863?wrap=1" target="_blank">
-                        Decoding Black Feminist Hashtags as Becoming
-                    </a>
-                
-                    <p>
-                        Tara L. Conley focuses on power structures around race and gender in social media and how code is built. An example she gives is hashtags like #YouOkSis, which stand out because they are more than just trends, they're a way to reach a large audience and speak up about racism and sexism.
-                    </p>
-                </div>
-
-
-                <!-- ARTICLE: intersectionality 101 -->
-                <div class="card resource-card"> 
-                    <a href="https://www.womankind.org.uk/intersectionality-101-what-is-it-and-why-is-it-important/" target="_blank">
-                        <img src="Int101.jpg" alt="venn diagram of intersectionality" class="card-image">
-                    </a>
-                    <a href="https://www.womankind.org.uk/intersectionality-101-what-is-it-and-why-is-it-important/" target="_blank">
-                        Intersectionality 101: what is it and why is it important?
-                    </a>
-                    <p>
-                        Intersectionality means different forms of discrimination overlap and shape women’s experiences in different ways. The article argues that women’s rights work must center marginalized women and take an inclusive, intersectional approach to achieve real equality
-                    </p>
-                </div>
-
-                <!-- ARTICLE: Indigenous Circuits -->
-                <div class="card resource-card"> 
-                    <a href="https://canvas.wisc.edu/groups/531114/discussion_topics/2355672" target="_blank">
-                        <img src="WShockley.jpg" alt="Image of William B. Shockley (1910-1989)" class="card-image">
-                    </a>
-                    <a href="https://canvas.wisc.edu/groups/531114/discussion_topics/2355672" target="_blank">
-                        Indigenous Circuits
-                    </a>
-                    <p>
-                        Tech companies hired Navajo workers partly for their skills but mostly because they were cheap. They ignored stereotypes that Navajo could only do traditional crafts and focused on hiring white men. The 1975 protest showed that workers resisted unfair conditions. This shows that technology is shaped by race, money, and power.
-                    </p>
-                </div>
-
-                <!-- ARTICLE: How Children Acquire Racial Biases-->
-                <div class="card resource-card"> 
-                    <a href="https://thereader.mitpress.mit.edu/how-children-acquire-racial-biases/" target="_blank">
-                        <img src="HowChildren.jpg" alt="Image of diverse group of children" class="card-image">
-                    </a>
-                    <a href="https://thereader.mitpress.mit.edu/how-children-acquire-racial-biases/" target="_blank">
-                        How Children Acquire Racial Biases
-                    </a>
-                    <p>
-                        Children are not born with racial biases, but they pick them up very young by observing adults and social cues, even when adults try to discourage prejudice. Studies show kids notice who gets attention, power, or positive signals, and they imitate these patterns, forming biases about race, status, and who “deserves” empathy or play. Early school experiences, teacher behavior, and classroom dynamics can unintentionally reinforce these biases, showing that children absorb social patterns quickly, long before formal lessons about race.
-                    </p>
-                </div>
-
-                <!-- Case Study: AI Screening-->
-                <div class="card resource-card"> 
-                    <a href="https://www.brookings.edu/articles/gender-race-and-intersectional-bias-in-ai-resume-screening-via-language-model-retrieval/" target="_blank">
-                        <img src="AIScreen.jpg" alt="Image of USA Flag and The United States Equal Employment Opportunity Commission Flag " class="card-image">
-                    </a>
-                    <a href="https://www.brookings.edu/articles/gender-race-and-intersectional-bias-in-ai-resume-screening-via-language-model-retrieval/" target="_blank">
-                        Gender, race, and intersectional bias in AI resume screening via language model retrieval
-                    </a>
-                    <p>
-                        Children are not born with racial biases, but they pick them up very young by observing adults and social cues, even when adults try to discourage prejudice. Studies show kids notice who gets attention, power, or positive signals, and they imitate these patterns, forming biases about race, status, and who “deserves” empathy or play. Early school experiences, teacher behavior, and classroom dynamics can unintentionally reinforce these biases, showing that children absorb social patterns quickly, long before formal lessons about race.
-                    </p>
-                </div>
-
-                <!-- Case Study: AI Screening-->
-                <div class="card resource-card"> 
-                    <a href="https://ojs.aaai.org/index.php/AIES/article/view/31748/33915" target="_blank">
-                        <img src="caseAIStudy.png" alt="Image of USA Flag and The United States Equal Employment Opportunity Commission Flag " class="card-image">
-                    </a>
-                    <a href="https://ojs.aaai.org/index.php/AIES/article/view/31748/33915" target="_blank">
-                        Gender, Race, and Intersectional Bias in Resume Screening via Language ModelRetrieval
-                    </a>
-                    <p>
-                        This study finds that large language models (LLMs) used for resume screening reproduce real-world biases, favoring White names and disadvantaging Black males. Analysis of over 500 resumes shows gender and racial disparities influenced by both demographics and textual features like document length. These results highlight fairness and legal concerns for AI-driven hiring tools.
-                    </p>
-                </div>
-
-                <!-- ARTICLE: The Black Scholar -->
-                <div class="card resource-card"> 
-                    <a href="https://www.youtube.com/watch?v=akOe5-UsQ2o" target="_blank">
-                        <img src="KimberleCrenshaw.jpg" alt="Image of Kimberlé Crenshaw " class="card-image">
-                    </a>
-                
-                    <a href="https://www.youtube.com/watch?v=akOe5-UsQ2o" target="_blank">
-                        The urgency of intersectionality | Kimberlé Crenshaw | TED
-                    </a>
-                
-                    <p>
-                        Kimberlé Crenshaw explains that people with overlapping identities can experience discrimination; anyone whose identities intersect experience this. She explains this with a case where a company hired white women and African American men but no African American women, showing how discrimination can uniquely affect people at the intersection of race and gender - a concept she calls intersectionality.
-                    </p>
-                </div>
-                
-
             </div>
         </section>
 
+        <!-- Process -->
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Process</h2>
+            <div class="cards-container">
+                <div class="card split">
+                    <div class="card-text">
+                        <p>
+                            Our group created an original dataset to train a machine learning model. We focused on classifying different categories of cups. This included using various colors, backgrounds, angles, distances, use of lights, shapes, and sizes. We collected 100 images from 3 different types of cups resulting in a total of 300 images. This allowed us to better understand how the data we collected directly affects the model's performance, outcomes, and potential bias. This helped make the dataset more diverse, given the various images captured. After collecting the images, we organized them into 3 labeled categories. <br><br>
+                            
+                            Class 1 = White Cups <br>
+                            Class 2 = Blue/Red Cup <br>
+                            Class 3 = Navy Cup <br><br>
+                            
+                            These were then used for training, where Teachable Machine uses TenserFLow.js. Teachable Machine uses supervised learning to complete this. This model is based on data input, model training, and real-time predictions. During training, the model is able to recognize and pick up patterns seen in the samples we provided. The model is able to identify patterns within the provided samples and adjust its parameters accordingly. This showed the importance of data quality and variation in building an effective machine learning model. 
+After training, the model is then able to predict new inputs in real time. These predictions are based on the sample data our group provided. 
+                        </p>
+                    </div>
+                    
+                    <div class="card-media">
+                        <img src="newProcess.png" alt="Training of Class 1 = white cups and Class 2 = Blue/Red cup">
+                    </div>
+                
+                </div>
+            
             </div>
-        </section>
-
-
-         <!---- thoughts/analysis on content above ---->
-         <section class="key-terms analysis-section">
-            <h2 class="overview-heading">Analysis</h2>
-            <div class="cards-container">
-                <div class="card">
-                    
-                    <h3> Intersectionality </h3>
-                    <p>
-                        <span class="key-term"><strong>Intersectionality</strong></span> refers to the way social categories such as race, class, and gender are interconnected and overlap in people’s lives. These overlapping identities can shape how individuals experience privilege, discrimination, or disadvantage. Rather than facing inequality for just one reason, many people experience it in layered and complex ways. Because everyone holds multiple identities, each person’s experience with discrimination or oppression is unique.
-From the sources above, intersectionality is evident in areas such as the workplace, wage gaps, the legal system, and healthcare outcomes. Workplace discrimination is especially common. Several of the readings highlight how Black women are often targeted not only because they are women, but because they are both Black and female. Their experiences cannot be understood by looking at race or gender alone; it is the combination of both (or multiple factors) that shapes the discrimination they face.
-For example, in the United States,<span class="key-term"><strong> Black women earn approximately 67 cents for every dollar paid to a white, non-Hispanic man</strong></span>. This wage gap reflects how intersecting identities can compound inequality, demonstrating why understanding intersectionality is essential when addressing systemic discrimination.
-                    </p>
-
-                    <h3> IBT </h3>
-                    <p> 
-                        When we took the race test, we were asked to quickly click buttons to categorize different words and faces. As we moved through the task, it was easy to fall into a rhythm. Our responses became almost automatic, and we weren’t consciously thinking through each association. Once we adjusted to certain pairings, our reactions felt smooth and effortless. However, when the groupings suddenly switched, the task became noticeably more difficult, even though we understood what the correct answers were supposed to be.
-                    </p>
-
-                    <p>
-                        What stood out most was how little time there was to pause and reflect. Because everything happened so quickly, many of our responses felt instinctive rather than intentional. That experience helped us realize that bias does not always come from conscious beliefs. Instead, it can develop gradually through repetition, exposure, environment, and learned patterns shaped by culture and upbringing. The hesitation we felt when the categories changed highlighted just how strong those learned associations can be.
-                    </p>
-
-                    <p>
-                        This experience also made us think about how people interact with technology in similar ways. When we are constantly exposed to certain messages or patterns, they begin to feel normal even if they contain bias or unfair assumptions. 
-                    </p>
-
-                    <p>
-                        One part of the results that surprised us was the demographic breakdown by age, gender, political affiliation, and education. We expected to see significant differences between groups, but there were fewer than we anticipated. That realization made us think about how widespread certain biases can be, regardless of background. It suggests that these associations are deeply embedded in society and culture, not just rooted in individual beliefs.
-                    </p>
-                </div>
-        </section>
-
-        <!---- what can i do/ next steps analysis ---->
-        <section class="key-terms analysis-section">
-            <h2 class="overview-heading">Next Steps</h2>
-            <div class="cards-container">
-                <div class="card">
-                    
-                    <h3> What can I do? </h3>
-                    <p> 
-                        In applying intersectionality to everyday life, you can educate yourself about how overlapping identities such as race, gender, class, sexuality, and disability shape people’s experiences. You can listen to and amplify the voices of marginalized communities, reflect on your own identities and areas of privilege or disadvantage, and challenge stereotypes or discriminatory language when you encounter them. You can also support policies and organizations that promote equity, advocate for more inclusive spaces in schools and workplaces, practice empathy by considering how different identities affect opportunities and barriers, and remain open to learning and correcting your assumptions in order to promote fairness and inclusion in everyday life.
-                    </p>
-
-                    <p> 
-                        You can also take the IBT test and review the resources above to see how your biases and assumptions may influence your perspectives, then use that awareness to continue learning and promoting fairness and inclusion in everyday life.
-                    </p>
-
-                    <!-- Button -->
-                    <a href="https://implicit.harvard.edu/implicit/takeatest.html" 
-                    class="btn" 
-                    target="_blank" 
-                    rel="noopener noreferrer"> IBT Test </a>
-
-                </div>
-        </section>
-
-        <!---- where is bias found ---->
-        <section class="key-terms analysis-section">
-            <h2 class="overview-heading">Recognizing Implicit Bias in Daily Life</h2>
-            <div class="cards-container">
-                <div class="card">
-                    
-                    <h3> Where is Implicit Bias Found?  </h3>
-                    <p> 
-                        Implicit bias can be found in many areas of everyday life, often without people even realizing it. It can appear in workplaces, schools, healthcare, law enforcement, and media, influencing decisions, behaviors, and opportunities. Implicit biases affect how we perceive and interact with others based on race, gender, age, sexuality, disability, or other social identities, shaping both personal judgments and systemic outcomes. Recognizing where these biases exist is the first step toward addressing them and creating more fair and inclusive environments.
-                    </p>
-
-                </div>
-        </section>
-
         
-        <!---- example and case study ---->
-        <section class="key-terms analysis-section">
-            <h2 class="overview-heading">Case Study</h2>
-            <div class="cards-container">
-                <div class="card">
-                    
-                    <h3> AI Bias in Resume Screening </h3>
-                    <p> 
-                        A study by Kyra Wilson and Aylin Caliskan highlights how <span class="key-term"><strong>artificial intelligence (AI) can inadvertently reproduce discrimination in hiring</strong></span>. The researchers simulated resume screening using large language models (LLMs) to understand how candidates are evaluated based on gender, race, and the intersection of these identities. They created over 550 resumes and paired each with names signaling different social identities: Black men, Black women, white men, and white women. Then they assessed how these resumes were ranked against 571 job descriptions across nine occupations: chief executive, marketing and sales manager, miscellaneous manager, human resources worker, accountant and auditor, miscellaneous engineer, secondary school teacher, designer, and miscellaneous sales and related worker. 
-                    </p>
-
-                    <p> The results revealed disparities: while resumes with <span class="key-term"><strong>men's names were favored 51.9% of the time</strong></span>. <span class="key-term"><strong>Women's names were selected 37% of the time</strong></span>. However, the racial bias was much more pronounced. <span class="key-term"><strong>White-associated names were selected 85.1% of the time.</strong></span>
-                        <span class="key-term"><strong>Black-associated names were selected only 8.6% of the time</strong></span>.<span class="key-term"><strong>Black women's names were selected only 14.8% of the time</strong></span>. When considering both race and gender together,<span class="key-term"><strong>Black men experienced the greatest disadvantage</strong></span>, being selected as candidates less frequently than any other group.
-                    </p>
-
-                    <img src="AIChart.jpg" alt="Text imgae" width="800" height="300">
-
-                    <p> 
-                    This study shows that even widely used AI tools can amplify existing societal inequalities if left unmonitored, which reinforces the need for human oversight. It also underscores the importance of auditing hiring algorithms, considering intersectional identities, and implementing transparency measures, such as notifying applicants when AI tools are used and allowing them to contest automated decisions, to mitigate discrimination in employment practices.
-                    </p>
-
-                    <!-- Button -->
-                    <a href="https://ojs.aaai.org/index.php/AIES/article/view/31748/33915" 
-                    class="btn" 
-                    target="_blank" 
-                    rel="noopener noreferrer"> Learn More
-                </a>
-                    
-                       
-
-                </div>
-                
         </section>
 
+        <!-- Project Demo Video -->
+      <section class="key-terms analysis-section">
+    <h2 class="overview-heading">Project Demo Video</h2>
+    <div class="cards-container">
+        <div class="card">
+            <video width="560" height="315" controls>
+                <source src="GMT20260418-015424_Recording.cutfile.20260418020041392_1920x1140.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+        <!-- Test Model --> 
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Test the Model</h2>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div style="text-align:center; padding: 40px;">
+                        <a class="btn go-model-btn" href="model.html">
+                            Try the model
+                        </a>
+                    
+                    </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Testing and results  -->
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Testing and results</h2>
+            <div class="cards-container">
+                <div class="card split">
+
+                    <div class="card-text">
+                        <p>
+                        During testing, our model was evaluated using a wide variety of inputs beyond the original dataset, including different cup colors, lighting conditions, backgrounds, camera angles, distances, and miscellaneous non-cup objects with various colors. This helped us understand how the model generalizes outside of its training data. 
+                        <br>
+                        <br>
+                        We found that the model heavily relied on color as its main feature for classification rather than the actual shape of the cups. Instead of recognizing structural features of a cup, it often made predictions based on whether an image appeared closer to “white”, “red/blue”, or "navy."
+                        <br>
+                        <br>
+                        Lighting also played a significant role in the model's behavior. Since many white cup images in the dataset were taken in darker lighting, the model sometimes classified darker or shadowed cups as white cups. This showed that it associated lighting conditions with labels rather than actual object identity.
+                        <br>
+                        <br>
+                        Backgrounds were another major influence. Because many red/blue cup and the navy cup images were taken in front of a brown or wooden background, the model sometimes linked that background with the red/blue class or the navy class. As a result, white cups placed on similar wooded/brown backgrounds were occasionally misclassified.
+                        <br>
+                        <br>
+                        We also observed that distance and angle affected accuracy. Cups placed closer to the camera were more likely to be correctly identified, while those further away were less accurately classified.
+                        <br>
+                        <br>
+                        Overall, the testing revealed that ML models depended more on surface-level patterns (color, background, lighting, and scale) than on true object recognition. This highlights the importance of diverse and balanced training data when building machine learning models, especially those that have high real-world impact and require reliable, consistent performance across different environments and conditions.
+                         
+                    </p>
+                </div>
+    
+            </div>
+    
+        </div>
+    </section>
+
+        <!-- Reflection to UnmaskingAI  -->
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Relation to Unmasking AI by Buolawmini</h2>
+            <div class="cards-container">
+                <div class="card split">
+        
+                    <div class="card-text">
+                        <p>
+                            Bias was present in our AI model, even though the task seemed simple: classifying cups into Class 1 (white cups), Class 2 (red/blue cups), and Class 3 (navy cups). Even in this basic system, the labels and decisions we made directly shaped how the model learned. The outputs were highly dependent on the dataset we created, including how we defined, separated, and labeled each class.
+                            <br> 
+                            <br> 
+                            This demonstrates a key idea: AI systems are not neutral. They rely entirely on the data they are trained on, as well as how that data is collected, structured, and represented. In our model, we observed that the background of the images had a significant influence on classification. This shows that the model was not truly “understanding” cups; it was learning patterns, including background color or lighting conditions.
+                            <br> 
+                            <br> 
+                            Separating objects into fixed categories also highlights how classification systems can oversimplify reality. Even though these were everyday objects, grouping them into strict labels reduced variation. This reflects a broader issue in real-world AI systems, where complex traits are often treated as fixed and easily defined, when in reality they are not. 
+                            <br> 
+                            <br> 
+                            Our model also made clear errors: for example, when a non-cup object was placed in front of the camera, the system still classified it as one of the cup categories. This is similar to what is known in computer vision as a false positive, when a system detects something that is not actually there. These mistakes highlight the limitations of AI systems and how easily they can misinterpret unfamiliar/underrepresented inputs.
+                            <br> 
+                            <br> 
+                            These observations connect directly to the ideas in Unmasking AI by Joy Buolamwini, which explains how bias emerges from both data and design choices. One example from the book is the challenge of poor illumination in computer vision. Cameras operate within the limits of the visible light spectrum, and these constraints can affect how different subjects are represented.
+                            <br> 
+                            <br> 
+                            An example of this bias is the “Shirley card,” a standard image used to calibrate film cameras. These cards originally featured a white woman and were used to set ideal exposure and color balance. As a result, people with darker skin tones were not accurately represented in photographs. This shows that even “default” technical settings are not neutral. They reflect specific assumptions and priorities.
+                            <br> 
+                            <br> 
+                            The book also discusses how bias in AI can lead to serious real-world consequences. Facial recognition systems, for example, have been shown to misidentify individuals, especially those from underrepresented groups, due to incomplete or biased training data. These errors can lead to wrongful accusations in criminal investigations, demonstrating how small technical flaws can scale into significant harm. This relates to our model because it also made incorrect classifications and was influenced by factors like background and image conditions rather than just the cup itself. While our example is low-stakes, it shows how AI systems can rely on patterns instead of true understanding, leading to errors that could be much more harmful in real-world applications.
+                            <br> 
+                            <br> 
+                            Bias in AI has also impacted students. During the COVID-19 pandemic, Buolamwini stated that many schools used facial recognition based proctoring systems for online exams. Reports showed that darker-skinned students were more likely to be flagged as suspicious or were sometimes unable to verify their identity, putting them at a disadvantage.
+                            <br> 
+                            <br> 
+                            The book also critiques large datasets like ImageNet, which are widely used to train AI models. Although ImageNet contains millions of labeled images, it also includes harmful and inaccurate classifications. For example, some images of dark-skinned individuals were labeled with terms like “wrongdoer” or “offender.” This shows how biased labeling within datasets can directly influence how AI systems interpret and categorize people.
+                            <br> 
+                            <br> 
+                            Overall, AI systems reflect human decisions at every stage, from data collection to labeling to model design. Even a simple cup classification model revealed how bias can enter through seemingly small choices. Accuracy and fairness of an AI system depend entirely on the quality and thoughtfulness of its training data. Without careful design and critical evaluation, these systems can reinforce and amplify existing biases and produce harmful or misleading outcomes in real-world applications.
+                        </p>
+                    </div>
+        
+                    <!-- images -->
+                    <div class="card-media stack-right">
+        
+                        <img src="unmaskingAIandJoy.jpg" class="reflection-image" alt="Unmasking AI">
+                        <br> 
+                        <br> 
+                        <img src="shirlyCard.png" class="reflection-image" alt="shirly card- of 2 white blonde women">
+                        <br> 
+                        <br> 
+                        <img src="GenderShades_gs04.webp" class="reflection-image" alt="image of different skin tones getting analyzed. black women had the lowest accuary for facial recognition">
+                        <br> 
+                        <br> 
+                        <img src="wrongdoerOffender1.png" class="reflection-image" alt= "image of man getting classified as a wrongdoer, offender">
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        </section>
+        
+        
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Lessons Learned</h2>
+            <div class="cards-container">
+                <div class="card">
+                   <p>
+                        One of the biggest lessons from this project is that AI systems are only as good as the data they are trained on. Even though our model was designed to classify cups, it did not actually “understand” what a cup is. Instead, it learned patterns from the images we provided. It was interesting to learn how the model takes several different aspects into account such as lighting, backgrounds, color, and it focused on these characteristics rather than the true object shape. The main takeaway was that in data collection outcomes can be strongly influenced by small aspects. <br> 
+                        <br> 
+                        Improvements that could be made would be to add more images to the dataset while diversifying the options of cups used. This could be useful because it would teach the model more meaningful features such as different lighting, backgrounds, and cup shapes. The goal with this improvement would be to reduce bias and improve accuracy. <br>
+                        <br>
+                        Our group believes that the idea of this project has direct real-world implications. For example, if AI systems are trained on limited data, that could produce inaccurate or even unfair results. Even though our project focused on cups, we have learned in this class that there is sometimes bias with AI systems in areas such as facial recognition and hiring processes which could have serious consequences.  
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citations-->
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Citations</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <p>
+                            <a href="https://search.library.wisc.edu/catalog/9914000055402121" target="_blank">
+                                Unmasking AI: My Mission to Protect What Is Human in a World of Machines by Joy Buolamwini 
+                            </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Refrences -->
+        <section class="key-terms analysis-section">
+            <h2 class="overview-heading">Refrences</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <p>
+                        <a href="https://github.com/ecaantero/Project2and3LIS500" target="_blank" rel="noopener noreferrer">
+                            GitGub Repository
+                          </a> <br>
+
+                          <!-- link below is updated with 3 calss-->
+                          <a href="https://teachablemachine.withgoogle.com/models/mhCp_3S74/" target="_blank" rel="noopener noreferrer">
+                            Try our model
+                          </a> <br>
+
+                          <a href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener noreferrer">
+                            Teachable Machine
+                          </a> <br>
+
+                          <a href=" https://github.com/ecaantero/Project2and3LIS500/tree/main/ClassificationImages/Class1WhiteCupImages" target="_blank" rel="noopener noreferrer">
+                            Dataset
+                          </a> <br> 
+
+                    </p>
+                </div>
+            </div>
+        </section>
 
     </main>
+
+</body>
+</html>
 
 </body>
 </html>
