@@ -79,6 +79,13 @@ header {
     margin-top: -10px;
     color: #555;
 }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
 /* Sections */
 .profile, .interests, .techHeroSection, /* some of these were removed with feedback changes */ 
 .christian-profile, .ChristiansInterests, .christianTechHeroSection {
