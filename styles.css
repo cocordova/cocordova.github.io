@@ -91,6 +91,16 @@ header {
     height: auto;
 }
 
+.card {
+    text-align: center;
+}
+
+.card ul {
+    text-align: left;
+    display: inline-block;
+    padding-left: 20px;
+}
+
 /* Sections */
 .profile, .interests, .techHeroSection, /* some of these were removed with feedback changes */ 
 .christian-profile, .ChristiansInterests, .christianTechHeroSection {
