@@ -147,6 +147,9 @@ header {
     max-width: 1200px;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
 
 .team-card, .card {
     background-color: white;
@@ -154,7 +157,7 @@ header {
     padding: 20px;
     flex: 1 1 280px;
     box-shadow: 0 4px 8px lightslategray; 
-    text-align: center;
+    text-align: left;
 }
 
 .team-card img {
