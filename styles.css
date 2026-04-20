@@ -92,12 +92,16 @@ header {
 }
 
 .card {
-    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 8px lightslategray;
+    
+    text-align: left;  
 }
 
 .card ul {
-    text-align: left;
-    display: inline-block;
     padding-left: 20px;
 }
 
@@ -253,15 +257,7 @@ header {
     justify-content: center;
 }
 
-/* Individual card styling */
-.card {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 12px;
-    width: 300px;
-    box-shadow: 0 4px 8px lightslategray;
-    text-align: center;
-}
+
 
 /* Headings inside cards */
 .card h3, .card a {
