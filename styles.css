@@ -69,6 +69,11 @@ nav {
     background-color: rgb(221, 0, 118); /* darker pink from regular button color */ 
 }
 
+.author {
+    font-size: 16px;
+    margin-top: -10px;
+    color: #555;
+}
 /* Sections */
 .profile, .interests, .techHeroSection, /* some of these were removed with feedback changes */ 
 .christian-profile, .ChristiansInterests, .christianTechHeroSection {
