@@ -86,6 +86,11 @@ header {
     margin: 20px 0;
 }
 
+.image-container img {
+    width: 150px;
+    height: auto;
+}
+
 /* Sections */
 .profile, .interests, .techHeroSection, /* some of these were removed with feedback changes */ 
 .christian-profile, .ChristiansInterests, .christianTechHeroSection {
