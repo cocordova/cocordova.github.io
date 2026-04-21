@@ -211,6 +211,8 @@ h1, h2, h3 {
 
 .picnic-image {
     width: 250px;
+    display: block;
+    margin: 0 auto;
 }
 
 /*Responsive */
