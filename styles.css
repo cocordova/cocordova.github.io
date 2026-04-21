@@ -209,6 +209,10 @@ h1, h2, h3 {
     margin-bottom: 20px;
 }
 
+.picnic-image {
+    width: 250px;
+}
+
 /*Responsive */
 @media (max-width: 760px) {
     .tech-hero, .overview-container {
