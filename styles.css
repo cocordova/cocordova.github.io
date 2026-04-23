@@ -91,6 +91,49 @@ header {
     height: auto;
 }
 
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Text box styling */
+.info-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Image gallery layout */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual image cards */
+.image-card {
+    width: 280px;
+    text-align: center;
+}
+
+.image-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Caption styling */
+.caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
 .card {
     background-color: #f7f7f7;
     padding: 20px;
