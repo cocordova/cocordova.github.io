@@ -162,13 +162,14 @@ header {
 }
 
 .card {
-    background-color: #f7f7f7;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 12px;
-    width: 300px;
+    background-color: white;
     box-shadow: 0 4px 8px lightslategray;
-    
-    text-align: left;  
+    text-align: left;
 }
 
 .card ul {
